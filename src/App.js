@@ -56,9 +56,10 @@ function App() {
         defaults = {icon: 'FOG',color: '#000',size: 80,animate: true};
         break;
       }
-      case "Clouds":
+      case "Mist" :
+      case "Clouds" :
       {
-        if(data.weather[0].description === "overcast clouds")
+        if(data.weather[0].description === "overcast clouds" )
         {
           if (currentTime <= sunsetTime)
           defaults = {icon: 'PARTLY_CLOUDY_DAY',color: '#000',size: 80,animate: true};
@@ -87,7 +88,6 @@ function App() {
         console.log("Hello World");
     } 
   }
-    
   return (
     <div className="App">
       <h1 className="head-1">Weather App</h1>
