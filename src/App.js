@@ -1,13 +1,16 @@
+import {config} from 'dotenv';
 import React,{ useState } from 'react';
 import {fetchWeather} from './fetchWeather';
 import './App.css';
 import ReactAnimatedWeather from 'react-animated-weather';
 
+config();
+
 function App() {
   const [city,setCity] = useState("");
   const [country,setCountry] = useState("");
   const [data,setData] = useState(null);
-
+  
   const handleChange = (e) => {
     if(e.target.name === "city") 
       setCity(e.target.value);
